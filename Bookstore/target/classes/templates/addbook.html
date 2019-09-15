@@ -28,6 +28,12 @@
 			<label for="price">Price</label>
 			<input type="text" id="price" th:field="*{price}" />
 			<div style="clear: both; display: block; height: 10px;"></div>
+								
+		  	<label for="catlist">Category</label>
+			 <select id="catlist" th:field="*{category}" class="form-control">
+       			<option th:each="category: ${categorys}" th:value="${category.categoryid}" th:text="${category.name}"></option>
+    		</select>
+    		<div style="clear: both; display: block; height: 10px;"></div>
 			
 			<input type="submit" value="Save"></input>
 		</form>
